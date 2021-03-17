@@ -1,4 +1,4 @@
-# Assignment: Lined cube
+# Assignment: Scaling up - Indexing
 
 *PLEASE READ THIS **ENTIRE** DOCUMENT FIRST*
 
@@ -8,15 +8,15 @@
 
 ## The assignment
 
-Open a new file in your IDE
+Download this repo and edit the index, use the video for guidance.
 
-* Make an array of 10 integers (50,100,150,200,250,300,350,400,450,500)
-* Make an array of 6 integers (100,200,300,400,500,600)
-* Using only vanilla javascript, use 2 loops to recreate the image below.
-![assignment01](assignment01.png)
+* Determine the start and end date of your data. Use d3.sort(d3.ascending) to make sure the first datapoint is the earliest and that the last datapoint is the latest.
+* Use d3.timeMinute to create a timerange containing every minute between the start and end date
+* Create an indexedData object with an empty object for every minute in the timerange. Use formatTime to format the key you use.
+* Loop over btcData and using the formatted time attribute, place the whole object into the indexedData object at the correct minute position.
+* Adapt the tooltip so that it retrieves the price data using the minute key. You can create the key using the inverted x coordinate of the mouse.
 
-* Variate the r value of the fill (rgb) to get a result that looks like the image below.
-![endresult01](endresult01.png)
+* Optionally, filter the data going into the line generator so that it only uses 1 datapoint out of every `btcData.length / width`
 
 
 ## Submitting your work
